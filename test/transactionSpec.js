@@ -18,6 +18,7 @@ describe('Transaction', function() {
       transaction.credit(2000);
       expect(transaction.credit).to.equal(2000)
     });
+
   });
 
   describe('Debit', function() {
