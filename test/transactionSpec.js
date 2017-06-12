@@ -1,4 +1,3 @@
-var assert = require('assert');
 var expect = require('chai').expect;
 const Transaction = require('../model/transaction.js')
 

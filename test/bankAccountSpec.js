@@ -1,4 +1,3 @@
-var assert = require('assert');
 var expect = require('chai').expect;
 const BankAccount = require('../model/bankAccount.js')
 
@@ -17,6 +16,13 @@ describe('BankAccount', function() {
     it('adds the amount to the account balance', function() {
       bankAccount.deposit(1000)
       expect(bankAccount.balance).to.equal(1000)
+    });
+  });
+
+  describe('withdraw', function() {
+    it('deducts the amount from the account balance', function() {
+      bankAccount.withdraw(500)
+      expect(bankAccount.balance).to.equal(-500)
     });
   });
 });
