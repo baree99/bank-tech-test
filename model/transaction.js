@@ -1,5 +1,5 @@
-const Transaction = function(date, balance) {
-  this.date = date;
+const Transaction = function(balance) {
+  this.date = new Date(Date.now());
   this.balance = balance;
 }
 
