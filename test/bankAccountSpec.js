@@ -4,7 +4,7 @@ const BankAccount = require("../model/bankAccount.js")
 
 describe("BankAccount", function() {
   it("initialize with zero balance", function() {
-    bankAccount = new BankAccount()
+    var bankAccount = new BankAccount();
     expect(bankAccount.balance).to.equal(0)
-  })
-})
+  });
+});
