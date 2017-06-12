@@ -15,15 +15,14 @@ describe('Transaction', function() {
 
   describe('Credit', function() {
     it('records the amount to be credited', function(){
-      transaction.credit(2000);
+      transaction.deposit(2000);
       expect(transaction.credit).to.equal(2000)
     });
-
   });
 
   describe('Debit', function() {
     it('records the amount to be debited', function(){
-      transaction.debit(2000);
+      transaction.withdraw(2000);
       expect(transaction.debit).to.equal(2000)
     });
   });

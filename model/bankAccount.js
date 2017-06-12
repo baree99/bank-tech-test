@@ -9,14 +9,14 @@ const BankAccount = function() {
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount;
   var transaction = new Transaction(this.balance);
-  transaction.credit(amount);
+  transaction.deposit(amount);
   this.statement.transactions.unshift(transaction);
 };
 
 BankAccount.prototype.withdraw = function (amount) {
   this.balance -= amount;
   var transaction = new Transaction(this.balance);
-  transaction.debit(amount);
+  transaction.withdraw(amount);
   this.statement.transactions.unshift(transaction);
 };
 

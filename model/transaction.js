@@ -3,11 +3,11 @@ const Transaction = function(balance) {
   this.balance = balance;
 }
 
-Transaction.prototype.credit = function(amount) {
+Transaction.prototype.deposit = function(amount) {
   this.credit = amount;
 }
 
-Transaction.prototype.debit = function(amount) {
+Transaction.prototype.withdraw = function(amount) {
   this.debit = amount;
 }
 
