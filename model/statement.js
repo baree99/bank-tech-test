@@ -3,7 +3,7 @@ const Statement = function() {
 };
 
 Statement.prototype.addTransaction = function(transaction) {
-  this.transactions.unshift(transaction)
+  this.transactions.unshift(transaction);
 };
 
 Statement.prototype.print = function () {
@@ -12,8 +12,8 @@ Statement.prototype.print = function () {
 };
 
 function header() {
-  console.log("date || credit || debit || balance")
-};
+  console.log("date || credit || debit || balance");
+}
 
 function body(transactions) {
   transactions.forEach(function(element) {
@@ -24,13 +24,13 @@ function body(transactions) {
       " || " +
       ifDefined(element.debit) +
       " || " +
-      element.balance
+      element.balance.toFixed(2)
     );
   });
-};
+}
 
 function ifDefined(value) {
-  return (value ? value : "")
-};
+  return (value ? value.toFixed(2) : "");
+}
 
 module.exports = Statement;

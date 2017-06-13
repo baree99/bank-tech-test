@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 const assert = require('assert');
 const sinon  = require('sinon');
-const Statement = require('../model/statement.js')
+const Statement = require('../model/statement.js');
 
 describe('Statement', function() {
 
@@ -9,8 +9,8 @@ describe('Statement', function() {
 
   describe('RecordTransaction', function() {
     var testTransaction = { date: '12/06/2017', balance: 2000, credit: 2000 };
-    statement.addTransaction(testTransaction)
-    expect(statement.transactions).to.have.lengthOf(1)
+    statement.addTransaction(testTransaction);
+    expect(statement.transactions).to.have.lengthOf(1);
   });
 
   describe('Print', function() {

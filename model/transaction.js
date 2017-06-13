@@ -1,14 +1,7 @@
-const Transaction = function(date, balance) {
+const Transaction = function(date, type, amount, balance) {
   this.date = date;
+  this[type] = amount;
   this.balance = balance;
-};
-
-Transaction.prototype.deposit = function(amount) {
-  this.credit = amount;
-};
-
-Transaction.prototype.withdraw = function(amount) {
-  this.debit = amount;
 };
 
 module.exports = Transaction;
