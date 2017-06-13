@@ -18,7 +18,7 @@ describe('Statement', function() {
       let spy = sinon.spy(console, 'log');
       statement.print();
       assert(spy.calledWith("date || credit || debit || balance"));
-      assert(spy.calledWith("12/06/2017 || 2000 ||  || 2000"));
+      assert(spy.calledWith("12/06/2017 || 2000.00 ||  || 2000.00"));
       spy.restore();
     });
   });
